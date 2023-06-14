@@ -12,3 +12,8 @@
     background:
       url('/assets/spiderman.jpg') center / cover #46B6AC;
   }
+
+  .mdl-cell{
+    background-color: blue;
+    color: aliceblue;
+  }
