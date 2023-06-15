@@ -4,9 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="Ejercicio2.css">
     <title>Aprendiendo Material Design Lite</title>
 </head>
 <body>
+     <!-- Uses a transparent header that draws on top of the layout's background -->
+     <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            
+          <div class="mdl-layout__header-row">
+            <span><img class="mdl-logo" src="Logo.png" alt="logo" width="120px"></span>
+            <!-- Title -->
+            <span class="mdl-layout-title">Webpage with Material Design Lite</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="">Link 1</a>
+              <a class="mdl-navigation__link" href="">Link 2</a>
+              <a class="mdl-navigation__link" href="">Link 3</a>
+              <a class="mdl-navigation__link" href="">Link 4</a>
+            </nav>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">Title</span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+          </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__content my-intro">
+              <span class="my-title">Introducción</span>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio incidunt atque, similique ad quae maxime molestias ex quidem totam vel est unde corrupti fugiat? Provident sequi maxime vitae iure voluptatum.
+            </section>
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--middle mdl-cell--stretch-desktop">
+                <img class="mdl-shadow--2dp" src="Logo.png" alt="Descripción de la imagen" width="250px">
+              </div>
+            </div>
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card-container">
+                    <!-- Wide card with share menu button -->
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Welcome</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris sagittis pellentesque lacus eleifend lacinia...
+                      </div>
+                      <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                          Get Started
+                        </a>
+                      </div>
+                      <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                          <i class="material-icons">share</i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+                
+            
+
+        </main>
+      
     
+    </div>
 </body>
 </html>
