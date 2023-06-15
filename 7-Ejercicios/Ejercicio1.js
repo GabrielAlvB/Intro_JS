@@ -33,3 +33,27 @@ if (respuesta === 1000) {
   } else {
     alert('Sigue participando');
   }
+//5. Solicitar al usuario que ingrese dos números y mostrar cuál de los dos es menor. 
+//No considerar el caso en que ambos números son iguales.
+let input = prompt("Ingresa dos valores separados por coma:");
+let [valor1, valor2,valor3] = input.split(",");
+if(valor1!==valor2){
+    if (valor1 < valor2) {
+        alert(valor1+' es menor');
+    } else {
+        alert(valor2+' es menor');
+    }
+}else{
+    alert('Los valores son iguales');
+}
+//6. Solicitar al usuario que ingrese tres números y mostrar cuál de los tres es el número mayor. 
+//Considerar el caso en que 2 números sean iguales.
+input = prompt("Ingresa tres valores separados por coma:");
+[valor1, valor2, valor3] = input.split(",");
+
+if (valor1 !== valor2 && valor2 !== valor3 && valor1 !== valor3) {
+  let maximo = Math.max(valor1, valor2, valor3);
+  alert("El valor máximo es: " + maximo);
+} else {
+  alert("Los valores son iguales");
+}
