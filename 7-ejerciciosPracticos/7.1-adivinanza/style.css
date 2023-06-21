@@ -4,12 +4,30 @@
     align-items: center;
     width:  100%;
   }
-  
+
+  .intro{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: large;
+}
 
 main{
     margin-left: 20px;
+    width: 100%;
 }
 
+body{
+    background-color: rgb(15, 119, 145);
+    
+}
+
+#guess::placeholder {
+    color: white;
+  }
+  
 
 .my-border{
     border-radius: 20px;
