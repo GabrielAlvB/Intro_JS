@@ -45,7 +45,7 @@ function(){
             //agregar un evento al boton reiniciar
             resetButton.addEventListener("click",resetGame);
 
-})
+});
 
 
 
