@@ -4,6 +4,12 @@ const searchingInput=document.querySelector('#studentInput');
 //declaramos vacio el array como buena practica
 let contacts = [];
 let filteredData=[];
+let datos=[]; //datos que seran extraidos. variable para getDataJson()
+let data=[]; //variable para catchEvent()
+
+//NOTA: ALgo importante de tomar en cuenta es el fetch.then y sus promesas
+// ya que puede tener errores si ejecutas el codigo fuera del then y necesitas
+//los datos dentro del then
 
 //concepto frontend
 //normalizacion:  consiste en limpiar la info
@@ -61,20 +67,16 @@ function renderContacts(contactsArray) {
       }
     }
 
-let datos=[];
-function getDataFromJson() {
-    
 
+function getDataFromJson() {
     fetch('api/characters.json')
     .then(response => response.json())
     .then(data => {
         datos = data; // Asignar los datos a la variable 'datos'
-        console.log(datos); // Mostrar los datos en la consola
-        console.log(typeof datos);
-        console.log(datos.length);
-        renderContacts(normalizeData(datos));
-        return datos;
-        
+       // console.log(datos); // Mostrar los datos en la consola
+       // console.log(typeof datos);
+       // console.log(datos.length);
+        renderContacts(normalizeData(datos));               
     });
 
     /* fetch('api/characters.json')
@@ -84,7 +86,7 @@ function getDataFromJson() {
 }
 
 
-let data=[];
+
 function catchEvent(event){
     
     const inputText= event?.target?.value.toLocaleLowerCase() || ''; //linea especial paracapturar texto
@@ -102,7 +104,7 @@ function catchEvent(event){
             for (let j=0; j<data[i].name.length; j++){
                 if(searchingInput.value.toLocaleLowerCase() === data[i].name.substring(j,searchingInput.value.length).toLocaleLowerCase()){
                     //console.log(data[i].name);
-                    console.log(data[i].name);
+                   // console.log(data[i].name);
                         const newContact = {
                             name: data[i].name,
                             photo: data[i].image
@@ -113,7 +115,7 @@ function catchEvent(event){
                 }
 
             }
-            console.log(filteredData);
+            //console.log(filteredData);
             renderContacts(filteredData);
             });
 
